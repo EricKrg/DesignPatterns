@@ -8,7 +8,7 @@ public class Knight extends Unit{
 
     public Knight(String inName){
         this.name = inName;
-        this.movement = new HorseRiding();
+        this.movement = new HorseRiding(); // default Behaviour
         this.attack = new SwordAttack();
     }
 
