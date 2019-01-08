@@ -1,5 +1,6 @@
 package com.eric.Strategy;
 
+import com.eric.Strategy.strats.HorseRiding;
 import com.eric.Strategy.strats.SwordAttack;
 import com.eric.Strategy.strats.Walking;
 
@@ -11,5 +12,11 @@ public class StrategyTestrunner {
         richard.setMovement(new Walking());
 
         System.out.println(richard);
+
+        final Knight ben = new Knight("Ben");
+        ben.setAttack(new SwordAttack());
+        ben.setMovement(new HorseRiding());
+
+        System.out.println(ben);
     }
 }

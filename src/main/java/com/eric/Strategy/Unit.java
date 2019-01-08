@@ -4,7 +4,6 @@ import com.eric.Strategy.strats.Attack;
 import com.eric.Strategy.strats.Movement;
 
 public abstract class Unit {
-    public Unit(){};
 
     private Movement movement = null;
     private Attack attack = null;
