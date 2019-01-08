@@ -4,27 +4,32 @@ import com.eric.Strategy.strats.Attack;
 import com.eric.Strategy.strats.Movement;
 
 public abstract class Unit {
+    public Movement movement = null;
+    public Attack attack = null;
 
-    private Movement movement = null;
-    private Attack attack = null;
 
-
-    public abstract String move();
-    public abstract String attack();
-
-    public Movement getMovement() {
-        return movement;
+    public String attack() {
+        this.setAttack(this.attack);
+        return this.getAttack().applyAttack();
     }
 
-    public void setMovement(Movement movement) {
-        this.movement = movement;
-    }
-
-    public Attack getAttack() {
-        return attack;
+    public String move() {
+        this.setMovement(this.movement);
+        return this.getMovement().applyMove();
     }
 
     public void setAttack(Attack attack) {
         this.attack = attack;
     }
+
+    public void setMovement(Movement movement) {
+        this.movement = movement;
+    }
+    public Movement getMovement() {
+        return movement;
+    }
+    public Attack getAttack() {
+        return attack;
+    }
+
 }

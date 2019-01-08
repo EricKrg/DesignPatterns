@@ -1,20 +1,15 @@
 package com.eric.Strategy;
 
+import com.eric.Strategy.strats.HorseRiding;
+import com.eric.Strategy.strats.SwordAttack;
+
 public class Knight extends Unit{
     public String name;
 
     public Knight(String inName){
         this.name = inName;
-    }
-
-    @Override
-    public String attack() {
-        return this.getAttack().applyAttack();
-    }
-
-    @Override
-    public String move() {
-        return this.getMovement().applyMove();
+        this.movement = new HorseRiding();
+        this.attack = new SwordAttack();
     }
 
     @Override
