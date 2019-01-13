@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class CoffeMaker {
     private State machineState;
     int drinkCounter = 0;
-    private ArrayList<String> history = new ArrayList<String>();
+    private ArrayList<String> history = new ArrayList<>();
 
     public CoffeMaker(){
         this.machineState = new Standby();
